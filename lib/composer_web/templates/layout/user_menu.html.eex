@@ -1,0 +1,8 @@
+<div x-data="{ open: false }">
+    <button x-on:click="open = ! open"
+>Expand</button>
+
+    <span x-show="open" x-transition>
+      Content...
+    </span>
+</div>
