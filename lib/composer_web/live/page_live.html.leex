@@ -1,16 +1,4 @@
 <section class="text-center">
-Yo
-  <div id="surveyCreatorContainer" phx-update="ignore"></div>
-  <%= form_for @changeset, Routes.user_path(@conn, :create), fn f -> %>
-  <label>
-    Name: <%= text_input f, :name %>
-  </label>
-
-  <label>
-    Age: <%= select f, :age, 18..100 %>
-  </label>
-
-  <%= submit "Submit" %>
-<% end %>
-
+  <div id="surveyCreatorContainer" phx-update="ignore" csrf=<%= Plug.CSRFProtection.get_csrf_token %>>
+  </div>
 </section>

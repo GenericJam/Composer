@@ -36,8 +36,4 @@ defmodule ComposerWeb.PageLive do
         into: %{},
         do: {app, vsn}
   end
-
-  def changeset(user, params \\ %{}) do
-    cast(user, params, [:name, :age])
-  end
 end
