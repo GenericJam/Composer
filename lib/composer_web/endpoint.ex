@@ -10,7 +10,7 @@ defmodule ComposerWeb.Endpoint do
     signing_salt: "PQiFey9T"
   ]
 
-  socket "/socket", ComposerWeb.UserSocket,
+  socket "/survey-socket", ComposerWeb.SurveySocket,
     websocket: true,
     longpoll: false
 

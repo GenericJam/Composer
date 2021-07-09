@@ -19,7 +19,7 @@ defmodule ComposerWeb.Router do
 
     live "/", PageLive, :index
 
-    resources "/survey", SurveyController, only: [:create]
+    resources "/survey", SurveyController, only: [:create, :new, :show, :index]
   end
 
   # Other scopes may use custom stacks.

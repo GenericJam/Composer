@@ -1,0 +1,1 @@
+<strong><%= display(@survey) %></strong> (<%= @survey.id %>)

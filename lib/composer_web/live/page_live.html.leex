@@ -1,4 +1,14 @@
 <section class="text-center">
-  <div id="surveyCreatorContainer" phx-update="ignore" csrf=<%= Plug.CSRFProtection.get_csrf_token %>>
-  </div>
+<h1>Welcome to Composer</h1>
+<%= if @empty do %>
+<h2>Please drag some items from the left panel into the centre.</h2>
+<% end %>
+<%= if @error do %>
+<h2>Server Error.</h2>
+<% end %>
+<%= if @submitted do %>
+<h2>Survey Submitted!</h2>
+<% else %>
+<div id="surveyCreatorContainer" phx-update="ignore" csrf=<%= @csrf_token %>>
+<% end %>
 </section>

@@ -10,9 +10,12 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "alpinejs": "^2.8.0",
+    "knockout": "^3.5.1",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "file:../deps/phoenix_live_view",
+    "survey-creator": "^1.8.55",
+    "survey-knockout": "^1.8.55",
     "tailwindcss": "^2.0.2",
     "topbar": "^1.0.1"
   },

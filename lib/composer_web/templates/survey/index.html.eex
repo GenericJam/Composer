@@ -1,0 +1,10 @@
+<h1>Listing Surveys</h1>
+
+<table>
+    <%= for survey <- @surveys do %>
+        <tr>
+            <td><%= render "survey.html", survey: survey %></td>
+            <td><%= link "View", to: Routes.survey_path(@conn, :show, survey.id) %></td>
+        </tr>
+    <% end %>
+</table>

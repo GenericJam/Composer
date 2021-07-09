@@ -6,8 +6,8 @@ defmodule Composer.SurveysTest do
   describe "surveys" do
     alias Composer.Surveys.Survey
 
-    @valid_attrs %{form: []}
-    @update_attrs %{form: []}
+    @valid_attrs %{form: %{}}
+    @update_attrs %{form: %{}}
     @invalid_attrs %{form: nil}
 
     def survey_fixture(attrs \\ %{}) do
@@ -31,7 +31,7 @@ defmodule Composer.SurveysTest do
 
     test "create_survey/1 with valid data creates a survey" do
       assert {:ok, %Survey{} = survey} = Surveys.create_survey(@valid_attrs)
-      assert survey.form == []
+      assert survey.form == %{}
     end
 
     test "create_survey/1 with invalid data returns error changeset" do
@@ -41,7 +41,7 @@ defmodule Composer.SurveysTest do
     test "update_survey/2 with valid data updates the survey" do
       survey = survey_fixture()
       assert {:ok, %Survey{} = survey} = Surveys.update_survey(survey, @update_attrs)
-      assert survey.form == []
+      assert survey.form == %{}
     end
 
     test "update_survey/2 with invalid data returns error changeset" do
